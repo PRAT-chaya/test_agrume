@@ -218,7 +218,7 @@ class SignupView extends View
     public function makeSignupForm(UserBuilder $ub)
     {
         $this->content = "";
-        if(!$ub->isValid()) {
+        if($ub->data !== null && !$ub->isValid()) {
             $this->content .= '<h3 class="alert alert-danger">Erreur dans le formulaire</h3>';
         }
         $this->title = "Formulaire d'inscription";

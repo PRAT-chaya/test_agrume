@@ -37,10 +37,9 @@ class UserBuilder
         $this->error = null;
         require_once 'is_email.php';
     }
-
+    
     public function createUser(): User
     {
-        //var_dump($this->data);
         if(!key_exists(self::FIRSTNAME_REF, $this->data) || 
             !key_exists(self::LASTNAME_REF, $this->data) ||
             !key_exists(self::EMAILADDR_REF, $this->data) ||
